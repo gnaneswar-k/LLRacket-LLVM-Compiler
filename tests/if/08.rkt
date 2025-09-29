@@ -1,0 +1,5 @@
+(let ([x 20])
+  (let ([y (if (eq? x (read)) 10 30)])
+    (if (> (- x y) 0)
+        (if (and (< x 40) (>= y 5)) y x)
+        (if (or (<= x 3) (not #f)) 1 0))))
