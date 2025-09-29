@@ -1,0 +1,10 @@
+#ifndef DIAG
+#define DIAG(ID, Level, Msg)
+#endif
+
+DIAG(err_unknown, Error, "Unknown error")
+DIAG(err_unknown_token, Error, "Unknown token")
+
+DIAG(err_unexpected_token, Error, "Unexpected token")
+
+#undef DIAG

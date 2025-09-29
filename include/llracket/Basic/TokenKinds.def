@@ -1,0 +1,56 @@
+#ifndef TOK
+#define TOK(ID)
+#endif
+#ifndef PUNCTUATOR
+#define PUNCTUATOR(ID, SP) TOK(ID)
+#endif
+#ifndef KEYWORD
+#define KEYWORD(ID, FLAG) TOK(kw_##ID)
+#endif
+
+// Lint
+TOK(unknown)
+TOK(eof)
+TOK(integer_literal)
+// Lvar
+TOK(identifier)
+// Lif
+TOK(boolean)
+
+// Lint
+PUNCTUATOR(l_paren, "(")
+PUNCTUATOR(r_paren, ")")
+PUNCTUATOR(plus, "+")
+PUNCTUATOR(minus, "-")
+PUNCTUATOR(read, "read")
+// Lvar
+PUNCTUATOR(l_square, "[")
+PUNCTUATOR(r_square, "]")
+// Lif
+PUNCTUATOR(cmp_eq, "eq?")
+PUNCTUATOR(cmp_less, "<")
+PUNCTUATOR(cmp_less_eq, "<=")
+PUNCTUATOR(cmp_great, ">")
+PUNCTUATOR(cmp_great_eq, ">=")
+PUNCTUATOR(op_and, "and")
+PUNCTUATOR(op_or, "or")
+PUNCTUATOR(op_not, "not")
+
+// Keywords with feature flags
+// Lvar
+KEYWORD(let, KEYALL)
+// Lif
+KEYWORD(if_cond, KEYALL)
+// Lwhile
+KEYWORD(set_bang, KEYALL)
+KEYWORD(begin, KEYALL)
+KEYWORD(while_loop, KEYALL)
+// Ltup
+KEYWORD(vector, KEYALL)
+KEYWORD(vector_length, KEYALL)
+KEYWORD(vector_ref, KEYALL)
+KEYWORD(vector_set_bang, KEYALL)
+
+#undef KEYWORD
+#undef PUNCTUATOR
+#undef TOK

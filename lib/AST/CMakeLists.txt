@@ -1,0 +1,5 @@
+add_library(llracketASTPrettyPrinter ASTPrettyPrinter.cpp)
+
+target_link_libraries(llracketASTPrettyPrinter PRIVATE LLVMCore LLVMSupport)
+
+target_include_directories(llracketASTPrettyPrinter PRIVATE ${LLVM_INCLUDE_DIRS})
