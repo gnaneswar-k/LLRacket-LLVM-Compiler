@@ -4,9 +4,11 @@ Compilers (Spring 2025) Course Project
 
 ## About
 
-Implements the **LTuple** language from the Essentials of Compilation (EoC) textbook.
+Built on **LLVM 20**.
 
-The frontend generates the LLVM IR which is then further compiled into the required machine code, thus providing an end-to-end compiler.
+Implements the **LTuple** language from the _Essentials of Compilation (EoC)_ textbook.
+
+The frontend generates the _LLVM IR_ which is then further compiled into the required machine code, thus providing an _end-to-end compiler_.
 
 ## Features
 
